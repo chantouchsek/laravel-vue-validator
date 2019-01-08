@@ -1,6 +1,6 @@
 {
-  "name": "laravel-vue-validator",
-  "version": "1.0.7",
+  "name": "laravel-vue2-validator",
+  "version": "0.0.1",
   "description": " Simple package to display error in vue from laravel validation",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/val-bubbleflat/laravel-vue-validator.git"
+    "url": "git+https://github.com/chantouchsek/laravel-vue-validator.git"
   },
   "keywords": [
     "laravel",
@@ -17,10 +17,10 @@
     "validator",
     "validation"
   ],
-  "author": "val bubbleflat <valentin@bubbleflat.com> (bubbleflat.com)",
+  "author": "Sek Chantouch <chantouchsek.cs83@gmail.com> (bookingkh.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/val-bubbleflat/laravel-vue-validator/issues"
+    "url": "https://github.com/chantouchsek/laravel-vue-validator/issues"
   },
-  "homepage": "https://github.com/val-bubbleflat/laravel-vue-validator#readme"
+  "homepage": "https://github.com/chantouchsek/laravel-vue-validator#readme"
 }
