@@ -4,7 +4,7 @@ By [bookingkh.com](https://bookingkh.com)
 
 This package allow to display errors from laravel validation rules
 
-! This package needs axios to work !
+! This package needs axios or vue-resource to work !
 
 # Installation
 
