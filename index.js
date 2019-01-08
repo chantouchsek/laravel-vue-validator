@@ -1,5 +1,6 @@
 import Errors from './Errors'
 import ErrorComponent from './ErrorComponent.vue'
+import axios from 'axios'
 
 
 class Validator{
@@ -17,7 +18,7 @@ class Validator{
                 });
             });
         }
-        
+
         if (axios) {
             axios.interceptors.response.use((response) => {
                 return response;

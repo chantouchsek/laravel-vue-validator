@@ -1,6 +1,6 @@
 {
   "name": "laravel-vue2-validator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": " Simple package to display error in vue from laravel validation",
   "main": "index.js",
   "scripts": {
