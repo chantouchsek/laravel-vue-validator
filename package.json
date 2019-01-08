@@ -1,6 +1,6 @@
 {
   "name": "laravel-vue2-validator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": " Simple package to display error in vue from laravel validation",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "vue",
     "validate",
     "validator",
-    "validation"
+    "validation",
+    "axios"
   ],
   "author": "Sek Chantouch <chantouchsek.cs83@gmail.com> (bookingkh.com)",
   "license": "MIT",

@@ -19,6 +19,16 @@ class Validator{
             });
         }
 
+        if(Vue.$http){
+            Vue.$http.interceptors.push((request, next) => {
+                next(response => {
+                    if(response.status === 422){
+                        Errors.fill(response.body)
+                    }
+                });
+            });
+        }
+
         if (axios) {
             axios.interceptors.response.use((response) => {
                 return response;

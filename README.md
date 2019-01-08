@@ -1,15 +1,15 @@
 # Laravel Vue Validator
 
-By [bubbleflat.com](https://bubbleflat.com)
+By [bookingkh.com](https://bookingkh.com)
 
 This package allow to display errors from laravel validation rules
 
-! This package needs vue-resource to work !
+! This package needs axios to work !
 
 # Installation
 
 ```
-npm install --save laravel-vue-validator
+npm install --save laravel-vue2-validator
 ```
 
 ```javascript
@@ -38,7 +38,7 @@ To flush errors in a vue component:
 
 ```html
 <template>
-	<input type='text' v-model='name' />
+	<input type='text' v-model='name' :inputClass="errorClass"/>
 	<!-- 
 	error do not need v-if,
 	its content is displayed only if "name" has error after validation"
@@ -52,7 +52,8 @@ export default {
 
 	data(){
 		return{
-			name: ''
+			name: '',
+			errorClass: 'form-error'
 		}
 	},
 
