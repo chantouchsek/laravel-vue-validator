@@ -13,7 +13,7 @@ npm install --save laravel-vue2-validator
 ```
 
 ```javascript
-import LaravelVueValidator from 'laravel-vue-validator'
+import LaravelVueValidator from 'laravel-vue2-validator'
   
 Vue.use(LaravelVueValidator)
 ```
@@ -38,13 +38,15 @@ To flush errors in a vue component:
 
 ```html
 <template>
-	<input type='text' v-model='name' :inputClass="errorClass"/>
-	<!-- 
-	error do not need v-if,
-	its content is displayed only if "name" has error after validation"
-	-->
-	<error input="name" />
-	<button @click="submit">Submit</button>
+	<form action="#" @keydown="$errors.onKeydown($event)">
+	    <input type='text' v-model='name' :inputClass="errorClass"/>
+    	<!-- 
+    	error do not need v-if,
+    	its content is displayed only if "name" has error after validation"
+    	-->
+    	<error input="name" />
+    	<button @click="submit">Submit</button>
+</form>
 </template>
 <script>
 
@@ -60,7 +62,11 @@ export default {
 	methods(){
 		// Error are displayed if Laravel backend return 422 Http code with name as error
 		this.$http.post('/submit', {name: this.name});
-	}
+	},
+     destroyed () {
+	  // Errors will be clear after component destroyed
+       this.$errors.flush()
+     }
 
 }
 
