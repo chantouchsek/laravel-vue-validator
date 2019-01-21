@@ -2,6 +2,7 @@ class Errors {
 
   constructor () {
     this.errors = {}
+    this.busy = false
   }
 
   has (key) {
