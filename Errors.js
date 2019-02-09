@@ -3,6 +3,7 @@ class Errors {
   constructor () {
     this.errors = {}
     this.busy = false
+    this.success = false
   }
 
   has (key) {
