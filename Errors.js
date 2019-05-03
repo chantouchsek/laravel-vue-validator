@@ -27,7 +27,18 @@ class Errors {
   }
 
   fill (values) {
-    this.errors = values
+    if (Array.isArray(values[0])) {
+      this.errors = values
+      return;
+    }
+    const messages = {}
+    for (let i = 0; i < values.length; i++) {
+      let type = values[i]
+      Object.assign(messages, {
+        [type.property]: Object.values(type.constraints)
+      })
+    }
+    this.errors = messages
   }
 
   flush () {
