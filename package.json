@@ -1,8 +1,9 @@
 {
   "name": "laravel-vue2-validator",
-  "version": "0.0.8",
+  "version": "0.0.9-beta-0",
   "description": " Simple package to display error in vue from laravel validation",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/chantouchsek/laravel-vue-validator/issues"
   },
-  "homepage": "https://github.com/chantouchsek/laravel-vue-validator#readme"
+  "homepage": "https://github.com/chantouchsek/laravel-vue-validator#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "axios": ">=0.15 <1.0"
+  }
 }

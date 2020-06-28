@@ -1,35 +1,61 @@
-class Errors {
-
+class Validator {
   constructor () {
     this.errors = {}
     this.busy = false
     this.success = false
   }
 
+  /**
+   * Check if field has any error
+   * @param {string} key
+   * @return {boolean}
+   */
   has (key) {
     return this.errors[key] !== undefined
   }
 
+  /**
+   * Get first error message by key
+   * @param {string} key
+   * @return {*}
+   */
   first (key) {
     if (this.has(key)) {
       return this.errors[key][0]
     }
+    return null
   }
 
+  /**
+   * Get all errors by key
+   * @param {string} key
+   * @return {*}
+   */
   get (key) {
     if (this.has(key)) {
       return this.errors[key]
     }
   }
 
+  /**
+   * Get all errors
+   * @return {{}}
+   */
   all () {
     return this.errors
   }
 
+  /**
+   * Fill errors object
+   * @param values
+   */
   fill (values) {
     this.errors = values
   }
 
+  /**
+   * Clear all errors
+   */
   flush () {
     this.errors = {}
   }
@@ -49,7 +75,6 @@ class Errors {
         }
       })
     }
-
     this.fill(errors)
   }
 
@@ -59,11 +84,12 @@ class Errors {
    * @param {KeyboardEvent} event
    */
   onKeydown (event) {
-    if (event.target.name) {
-      this.clear(event.target.name)
+    const { name } = event.target
+    if (name) {
+      this.clear(name)
     }
   }
 
 }
 
-export default new Errors()
+export default new Validator()

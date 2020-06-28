@@ -36,14 +36,10 @@ To flush errors in a vue component:
 
 # Full Example
 
-```html
+```vue
 <template>
-	<form action="#" @keydown="$errors.onKeydown($event)">
+	<form @keydown="$errors.onKeydown($event)">
 	    <input type='text' v-model='name' :inputClass="errorClass"/>
-    	<!-- 
-    	error do not need v-if,
-    	its content is displayed only if "name" has error after validation"
-    	-->
     	<error input="name" />
     	<button @click="submit">Submit</button>
 </form>
@@ -51,23 +47,18 @@ To flush errors in a vue component:
 <script>
 
 export default {
-
 	data(){
 		return{
 			name: '',
 			errorClass: 'form-error'
 		}
 	},
-
 	methods(){
-		// Error are displayed if Laravel backend return 422 Http code with name as error
 		this.$http.post('/submit', {name: this.name});
 	},
      destroyed () {
-	  // Errors will be clear after component destroyed
        this.$errors.flush()
      }
-
 }
 
 </script>
