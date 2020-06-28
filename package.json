@@ -1,11 +1,11 @@
 {
   "name": "laravel-vue2-validator",
-  "version": "0.0.9-beta-3",
+  "version": "0.0.9-beta-4",
   "description": " Simple package to display error in vue from laravel validation",
   "main": "dist/index.js",
-  "types": "src/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rimraf dist/* && babel ./src -d dist",
+    "build": "babel ./src --out-dir dist --source-maps inline --copy-files",
     "prepublish": "yarn build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,13 @@
+tests/
+dist/validator.min.js
+spec/
+scripts/
+karma.conf.js
+Gruntfile.js
+gulpfile.js
+.idea/
+public/
+demo/
+coverage/
+yarn-error.log
+src/
