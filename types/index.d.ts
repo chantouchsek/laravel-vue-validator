@@ -2,7 +2,7 @@ import { PluginFunction } from 'vue';
 
 type AsyncFunction = ((arg0: any) => Promise<any>) | Promise<any>;
 
-export default class FormValidator extends FormValidatorInstance {
+export default class Validator extends FormValidatorInstance {
     constructor(options?: FormValidatorOptions);
     busy: boolean;
     success: boolean;
