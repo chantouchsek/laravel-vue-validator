@@ -2,7 +2,7 @@
   "name": "laravel-vue2-validator",
   "version": "0.0.9-beta-3",
   "description": " Simple package to display error in vue from laravel validation",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "types": "src/types/index.d.ts",
   "scripts": {
     "build": "rimraf dist/* && babel ./src -d dist",
