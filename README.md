@@ -2,6 +2,11 @@
 
 By [bookingkh.com](https://bookingkh.com)
 
+[![Latest Version on NPM](https://img.shields.io/npm/v/laravel-vue2-validator.svg?style=flat-square)](https://npmjs.com/package/laravel-vue2-validator)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![npm](https://img.shields.io/npm/dt/laravel-vue2-validator.svg?style=flat-square)](https://npmjs.com/package/laravel-vue2-validator)
+[![npm](https://img.shields.io/npm/dm/laravel-vue2-validator.svg?style=flat-square)](https://npmjs.com/package/laravel-vue2-validator)
+
 This package allow to display errors from laravel validation rules
 
 ! This package needs axios or vue-resource to work !
