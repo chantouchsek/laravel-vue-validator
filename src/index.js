@@ -128,7 +128,7 @@ export function install (Vue, options = {}) {
     }, (error) => {
       const { response } = error
       if (response.status === 422) {
-        const { data = {} } = response.data.errors
+        const { data = {} } = response
         validator.fill(data.errors)
       }
       return Promise.reject(error);
