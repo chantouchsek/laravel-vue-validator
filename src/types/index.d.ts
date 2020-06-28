@@ -109,3 +109,5 @@ export interface ErrorsOptions {
         [key: string]: any
     }
 }
+
+export class LValidator extends Validator{}
