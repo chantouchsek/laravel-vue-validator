@@ -18,16 +18,15 @@ class Validator {
       axios.interceptors.response.use((response) => {
         return response;
       }, (error) => {
-        const { response, data } = error
-        const { status } = response
-        if (status === 422) {
-          LValidator.fill(data.errors)
+        if (error.response.status === 422) {
+          LValidator.fill(error.response.data.errors)
         }
         return Promise.reject(error);
       });
     }
     Vue.mixin({
       beforeCreate () {
+        //errors
         this.$options.$errors = {};
         Vue.util.defineReactive(this.$options, '$errors', LValidator);
         if (!this.$options.computed) {
