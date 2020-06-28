@@ -137,7 +137,7 @@ export function install (Vue, options = {}) {
   Vue.mixin({
     beforeCreate () {
       this.$options.$errors = {};
-      Vue.util.defineReactive(this.$options, '$errors', Validator);
+      Vue.util.defineReactive(this.$options, '$errors', validator);
       if (!this.$options.computed) {
         this.$options.computed = {}
       }
