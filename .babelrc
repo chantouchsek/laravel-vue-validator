@@ -1,14 +1,4 @@
 {
-    "presets": [
-        ["minify", {
-            "keepFnName": true,
-            "evaluate": false,
-            "mangle": true,
-            "keepClassName": true,
-            "removeConsole": true,
-            "removeDebugger": true
-        }]
-    ],
     "plugins": [
         "transform-object-rest-spread",
         "transform-async-to-generator",

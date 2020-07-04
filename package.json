@@ -1,9 +1,9 @@
 {
   "name": "laravel-vue2-validator",
-  "version": "0.0.9-beta-10",
+  "version": "0.0.9-beta-13",
   "description": " Simple package to display error in vue from laravel validation",
-  "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/types/index.d.ts",
   "scripts": {
     "build": "babel ./src --out-dir dist --source-maps inline --copy-files",
     "prepublish": "yarn build",
